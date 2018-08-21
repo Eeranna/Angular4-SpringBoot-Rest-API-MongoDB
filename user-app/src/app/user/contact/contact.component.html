@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="panel with-nav-tabs panel-primary">
+        <div class="panel-body">
+  <section>
+    <header>
+      <div class="row">
+        <div class="col-md-8">
+          <h3 style="color: blue">Angular5 with Spring Boot REST service and MongoDB</h3>
+        </div>
+        <hr>
+        <div class="col-md-2">
+          <a [routerLink]="['/contact-create']" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color: blue"> NewContact </span>
+          </a>
+        </div>
+      </div>
+
+    </header>
+  </section>
+          <section class="main">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let contact of contacts">
+      <td>{{ contact.name }}</td>
+      <td>{{ contact.address }}</td>
+      <td>{{ contact.city }}</td>
+      <td>{{ contact.phone }}</td>
+      <td>{{ contact.email }}</td>
+      <td><a [routerLink]="['/contact-detail', contact.id]">Show Detail</a></td>
+    </tr>
+    </tbody><br>
+    <ul class="nav navbar-nav navbar-left">
+      <li>
+      <label>Name</label>
+        <select class="selectpicker headerSelect">
+          <option>Select</option>
+          <option *ngFor="let contact of contacts" [value]="contact">{{contact.name}}</option>
+        </select>
+      </li>
+      <li>
+      <label>Phone</label>
+        <select class="selectpicker headerSelect">
+          <option>Select</option>
+          <option *ngFor="let contact of contacts" [value]="contact">{{contact.phone}}</option>
+        </select>
+      </li>
+    </ul>
+  </table>
+          </section>
+</div>
+      </div>
+    </div>
+  </div>
+</div>

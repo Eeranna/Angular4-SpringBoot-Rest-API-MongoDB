@@ -1,0 +1,22 @@
+<div class="container">
+  <h3 style="color: blue">Contact Details!!!</h3>
+  <dl class="list">
+    <dt>Name</dt>
+    <dd>{{ contacts.name }}</dd>
+    <dt>Address</dt>
+    <dd>{{ contacts.address }}</dd>
+    <dt>City</dt>
+    <dd>{{ contacts.city }}</dd>
+    <dt>Phone</dt>
+    <dd>{{ contacts.phone }}</dd>
+    <dt>Email</dt>
+    <dd>{{ contacts.email }}</dd>
+  </dl>
+  <div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['/contact-edit', contacts.id]" class="btn btn-success">EDIT</a>
+      <button class="btn btn-danger" type="button" (click)="deleteContact(contacts.id)">DELETE</button>
+      <button type="button" class="btn btn-warning" (click)="redirectTopicPage()">Back</button>
+    </div>
+  </div>
+</div>

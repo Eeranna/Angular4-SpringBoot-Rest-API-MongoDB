@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="panel with-nav-tabs panel-primary">
+        <div class="panel-body">
+          <section>
+            <header>
+              <div class="row">
+                <div class="col-md-8">
+                  <h3 style="color: blue">Angular5 with Spring Boot REST service from Neo4J DB</h3>
+                </div>
+                <hr>
+              </div>
+
+            </header>
+          </section>
+          <section class="main">
+            <table class="table">
+              <thead>
+              <tr>
+                <th>Id</th>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Track</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let track of tracks">
+                <td>{{ track.id }}</td>
+                <td>{{ track.code }}</td>
+                <td>{{ track.name }}</td>
+                <td>{{ track.track }}</td>
+              </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

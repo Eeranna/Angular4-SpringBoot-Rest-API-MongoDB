@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="panel with-nav-tabs panel-primary">
+        <div class="panel-body">
+          <section>
+            <header>
+              <div class="row">
+                <div class="col-md-8">
+                  <h3 style="color: blue">Angular5 with Spring Boot REST service from Neo4J DB</h3>
+                </div>
+                <hr>
+              </div>
+
+            </header>
+          </section>
+          <section class="main">
+            <table class="table">
+              <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Service-Offering</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let bts of btsprocess">
+                <td>{{ bts.id }}</td>
+                <td>{{ bts.name }}</td>
+                <td>{{ bts.service_offering }}</td>
+              </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
