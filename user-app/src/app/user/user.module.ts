@@ -20,6 +20,11 @@ import { ContactCreateComponent } from './contact-create/contact-create.componen
 import { ContactEditComponent } from './contact-edit/contact-edit.component';
 import { TrackMasterComponent } from './track-master/track-master.component';
 import { BtsProcessComponent } from './bts-process/bts-process.component';
+import {EmployeeListComponent} from './menulinks/employee-list/employee-list.component';
+import {Ng2SearchPipeModule} from 'ng2-search-filter';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {Ng2OrderModule} from 'ng2-order-pipe';
+import {HotelInfoComponent} from './menulinks/hotel-info/hotel-info.component';
 
 @NgModule({
   imports: [
@@ -27,7 +32,10 @@ import { BtsProcessComponent } from './bts-process/bts-process.component';
     UserRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule,
+    Ng2OrderModule
   ],
   declarations: [
     UserListComponent,
@@ -46,7 +54,9 @@ import { BtsProcessComponent } from './bts-process/bts-process.component';
     ContactCreateComponent,
     ContactEditComponent,
     TrackMasterComponent,
-    BtsProcessComponent
+    BtsProcessComponent,
+    EmployeeListComponent,
+    HotelInfoComponent
   ]
 })
 export class UserModule { }

@@ -31,5 +31,12 @@ export class ContactComponent implements OnInit {
       }
     );
   }
+  p : number = 1;
+  key : string = 'name';
+  reverse : boolean = false;
+  sort(key) {
+    this.key = key;
+    this.reverse = this.reverse;
+  }
 
 }

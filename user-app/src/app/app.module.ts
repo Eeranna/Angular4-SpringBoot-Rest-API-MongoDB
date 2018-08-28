@@ -32,6 +32,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {ContactService} from "./user/contact/contact.service";
 import {TrackMasterService} from "./user/track-master/track-master.service";
 import {BtsProcessService} from "./user/bts-process/bts-process.service";
+import {EmpService} from './user/menulinks/employee-list/emp.service';
+import {HotelService} from './user/menulinks/hotel-info/hotel.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import {BtsProcessService} from "./user/bts-process/bts-process.service";
     TopicService,
     ContactService,
     TrackMasterService,
-    BtsProcessService
+    BtsProcessService,
+    EmpService,
+    HotelService
   ],
   bootstrap: [AppComponent]
 })

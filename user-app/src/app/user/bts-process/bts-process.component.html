@@ -15,22 +15,32 @@
             </header>
           </section>
           <section class="main">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+              <ul class="navbar-nav">
+                <li class="nav-item search">
+                  <input class="form-control" placeholder="search" type="text" name="search" [(ngModel)]="filter">
+                </li>
+              </ul>
+            </nav>
             <table class="table">
               <thead>
               <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Service-Offering</th>
+                <th (click)= "sort('id')">Id</th>
+                <th (click)= "sort('name')">Name</th>
+                <th (click)= "sort('service_offering')">Service-Offering</th>
               </tr>
               </thead>
               <tbody>
-              <tr *ngFor="let bts of btsprocess">
+              <tr *ngFor="let bts of btsprocess | filter:filter | orderBy:key : reverse | paginate:{ itemsPerPage:3, currentPage:p};">
                 <td>{{ bts.id }}</td>
                 <td>{{ bts.name }}</td>
                 <td>{{ bts.service_offering }}</td>
               </tr>
               </tbody>
             </table>
+            <div class="paginator" align="right">
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
           </section>
         </div>
       </div>

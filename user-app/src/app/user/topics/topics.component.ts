@@ -15,7 +15,6 @@ export class TopicsComponent implements OnInit {
 
     constructor(private router: Router,
                 private topicService: TopicService) { }
-
     ngOnInit() {
         this.getAllTopics();
         this.router.navigate(['topics']);
@@ -54,4 +53,11 @@ export class TopicsComponent implements OnInit {
         }
     }
 
+  p : number = 1;
+  key : string = 'name';
+  reverse : boolean = false;
+  sort(key) {
+    this.key = key;
+    this.reverse = this.reverse;
+  }
 }

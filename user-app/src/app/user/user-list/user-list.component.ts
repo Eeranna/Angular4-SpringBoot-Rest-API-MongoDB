@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class UserListComponent implements OnInit {
 
   users: User[];
-
+  p : number = 1;
   constructor(private router: Router,
               private userService: UserService) { }
 
@@ -52,6 +52,12 @@ export class UserListComponent implements OnInit {
         }
       );
     }
+  }
+  key : string = 'firstName';
+  reverse : boolean = false;
+  sort(key) {
+    this.key = key;
+    this.reverse = this.reverse;
   }
 
 }
