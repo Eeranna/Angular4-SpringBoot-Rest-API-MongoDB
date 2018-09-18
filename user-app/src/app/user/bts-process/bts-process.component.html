@@ -31,7 +31,7 @@
               </tr>
               </thead>
               <tbody>
-              <tr *ngFor="let bts of btsprocess | filter:filter | orderBy:key : reverse | paginate:{ itemsPerPage:3, currentPage:p};">
+              <tr *ngFor="let bts of btsprocess | filter:filter | orderBy:key : reverse | paginate:{ itemsPerPage:5, currentPage:p};">
                 <td>{{ bts.id }}</td>
                 <td>{{ bts.name }}</td>
                 <td>{{ bts.service_offering }}</td>

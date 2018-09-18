@@ -11,8 +11,9 @@ import {Router} from "@angular/router";
 export class ContactService {
 
   private apiUrl = 'http://localhost:8080/contacts';
+  private otpUrl = 'http://localhost:8080/otp';
   contacts: any;
-  constructor(private http: Http, private router: Router) { }
+  constructor(private http: Http, private router: Router, private httpClient: HttpClient) { }
 
   findAll(): Observable<Contact[]>  {
     return this.http.get(this.apiUrl)
@@ -41,6 +42,10 @@ export class ContactService {
   deleteContactById(id: number): Observable<Response> {
     return this.http.delete(this.apiUrl + '/' + id)
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
+  getOtp() {
+    return this.httpClient.get<any>(this.otpUrl);
   }
 
 

@@ -38,6 +38,13 @@
           <form novalidate [formGroup]="userForm" (ngSubmit)="updateContact()">
             <h3 style="color: blue">Contact Details</h3><hr>
             <div class="form-group">
+              <label>Cid</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="id"
+                     [disabled]="userForm.controls['id'].disabled">
+            </div>
+            <div class="form-group">
               <label>Name</label>
               <input type="text"
                      class="form-control"

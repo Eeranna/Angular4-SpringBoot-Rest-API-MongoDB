@@ -32,7 +32,7 @@
               </tr>
               </thead>
               <tbody>
-              <tr *ngFor="let track of tracks | filter:filter | orderBy:key : reverse | paginate:{ itemsPerPage:3, currentPage:p};">
+              <tr *ngFor="let track of tracks | filter:filter | orderBy:key : reverse | paginate:{ itemsPerPage:5, currentPage:p};">
                 <td>{{ track.id }}</td>
                 <td>{{ track.code }}</td>
                 <td>{{ track.name }}</td>

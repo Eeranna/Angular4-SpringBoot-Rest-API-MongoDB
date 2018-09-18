@@ -58,6 +58,15 @@ export class EmployeeListComponent implements OnInit {
     this.displayEmployeeList();
   }
 
+  getEmployee(event) {
+    //this.employeeRecord = employee;
+    //console.log(event.target.value);
+    const user = this.users.find(el => el['id'] === +event.target.value);
+    //console.log(user);
+    this.employeeRecord = user;
+    // this.empService.updateRecord(this.employeeRecord).subscribe();
+  }
+
   onClose() {
     this.hideForm();
   }

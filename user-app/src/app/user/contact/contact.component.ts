@@ -10,14 +10,8 @@ import {ContactService} from "./contact.service";
 export class ContactComponent implements OnInit {
 
   contacts: any;
-
-  /*private apiUrl = 'http://localhost:8080/contacts';
-  constructor(private http: HttpClient) { }
-  ngOnInit() {
-    this.http.get(this.apiUrl).subscribe(data => {
-      this.contacts = data;
-    });
-  }*/
+  otps = [];
+  message = '';
   constructor(private contactService: ContactService) { }
   ngOnInit() {
     this.getContacts();
@@ -30,6 +24,13 @@ export class ContactComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+  getOtp(){
+    this.contactService.getOtp()
+      .subscribe(
+        data => this.otps = data,
+        error => this.message = error,
+      );
   }
   p : number = 1;
   key : string = 'name';

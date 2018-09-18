@@ -22,11 +22,13 @@ export class ContactCreateComponent implements OnInit {
 
   ngOnInit() {
     this.userForm = new FormGroup({
+      id: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
       address: new FormControl('', Validators.required),
       city: new FormControl('', Validators.required),
       phone: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.pattern("[^ @]*@[^ @]*")])
+      email: new FormControl('', [Validators.required, Validators.pattern("[^ @]*@[^ @]*")]),
+      otp: new FormControl('', Validators.required)
     });
   }
 
@@ -42,11 +44,13 @@ export class ContactCreateComponent implements OnInit {
 
   saveContact() {
         let contact: Contact = new Contact(
+          this.userForm.controls['id'].value,
           this.userForm.controls['name'].value,
           this.userForm.controls['address'].value,
           this.userForm.controls['city'].value,
           this.userForm.controls['phone'].value,
-          this.userForm.controls['email'].value);
+          this.userForm.controls['email'].value,
+          this.userForm.controls['otp'].value);
 
         this.contactService.saveContact(contact).subscribe();
         this.router.navigate(['/contacts']);

@@ -29,7 +29,7 @@ export class TopicCreateComponent implements OnInit {
     });
 
     this.userForm = new FormGroup({
-      eid: new FormControl('', Validators.required),
+      eid: new FormControl({value: '', disabled: true}, Validators.required),
       name: new FormControl('', Validators.required),
       age: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.pattern("[^ @]*@[^ @]*")])

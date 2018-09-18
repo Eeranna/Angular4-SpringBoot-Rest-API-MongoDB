@@ -66,6 +66,35 @@
               <td><button type="submit" class="btn btn-warning" (click)="updateRecord(user)">Update</button></td>
             </tr>
             </tbody>
+          <ul class="nav navbar-nav navbar-left">
+            <div class="form-group">
+                <label>Employee:</label>
+                <select class="selectpicker headerSelect" (change)="getEmployee($event)">
+                  <option>Select</option>
+                  <option *ngFor="let user of users" [value]="user.id">{{user.id}}</option>
+                </select>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <label class="control-label col-sm-4" for="fstName">FirstName:</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="fstName" name="firstName" [(ngModel)]="employeeRecord.firstName">
+                </div>
+              </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4" for="dept">Department:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="dept" name="dept" [(ngModel)]="employeeRecord.dept">
+              </div>
+            </div>
+              <div class="form-group">
+                <label class="control-label col-sm-4" for="cty">City:</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="cty" name="city" [(ngModel)]="employeeRecord.city">
+                </div>
+              </div>
+            </div>
+            </ul>
           </table>
         </section>
         <div class="paginator" align="right">
@@ -85,6 +114,12 @@
       <div class="col-md-3"></div>
       <form class="form-horizontal col-md-6">
         <h3 style="color: blue">{{formTitle}}</h3>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="id">_Id:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="_id" name="_id" [(ngModel)]="employeeRecord._id">
+          </div>
+        </div>
         <div class="form-group">
           <label class="control-label col-sm-2" for="id">Id:</label>
           <div class="col-sm-10">
