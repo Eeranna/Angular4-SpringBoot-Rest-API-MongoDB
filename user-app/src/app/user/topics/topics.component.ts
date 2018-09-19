@@ -12,9 +12,13 @@ import {Topic} from './Topic';
 export class TopicsComponent implements OnInit {
 
     topics: Topic[];
-
-    constructor(private router: Router,
-                private topicService: TopicService) { }
+    pwds = [];
+    message = '';
+    constructor(private router: Router, private topicService: TopicService) { }
+    topicRecord = {
+      'name': '',
+      'email': '',
+  };
     ngOnInit() {
         this.getAllTopics();
         this.router.navigate(['topics']);
@@ -52,6 +56,19 @@ export class TopicsComponent implements OnInit {
             );
         }
     }
+
+  getPassword(){
+    this.topicService.getPassword()
+      .subscribe(
+        data => this.pwds = data,
+        error => this.message = error,
+      );
+  }
+
+  getTopic(event) {
+    const topic = this.topics.find(el => el['eid'] === +event.target.value);
+    this.topicRecord = topic;
+  }
 
   p : number = 1;
   key : string = 'name';

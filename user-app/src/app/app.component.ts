@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'Angular 4 CRUD application with Spring Boot REST service!!';
+  title = 'Angular4 application with Spring Boot REST service!!';
   constructor(private router: Router) {}
   ngOnInit() {
     firebase.initializeApp({

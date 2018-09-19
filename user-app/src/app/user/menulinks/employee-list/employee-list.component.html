@@ -53,7 +53,7 @@
 
             </thead>
             <tbody>
-            <tr *ngFor="let user of users | filter:filter | orderBy:key : reverse | paginate:{ itemsPerPage:5, currentPage:p};">
+            <tr *ngFor="let user of users | filter: filter | orderBy:key : reverse | paginate:{ itemsPerPage:5, currentPage:p};">
               <td>{{user.id}}</td>
               <td>{{user.firstName}}</td>
               <td>{{user.mname}}</td>

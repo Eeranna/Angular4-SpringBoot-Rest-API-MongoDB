@@ -4,14 +4,16 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Observable';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class TopicService {
 
     private topicApiUrl = 'http://localhost:8080/user/all';
     private topicApi = 'http://localhost:8080/user';
+    private pwdUrl = 'http://localhost:8080/password';
 
-    constructor(private http: Http) {
+    constructor(private http: Http, private httpClient: HttpClient) {
     }
 
     findAll(): Observable<Topic[]>  {
@@ -40,5 +42,9 @@ export class TopicService {
     deleteTopicById(eid: number): Observable<Response> {
       return this.http.delete(this.topicApi + '/' + eid)
           .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
+
+    getPassword() {
+      return this.httpClient.get<any>(this.pwdUrl);
     }
 }

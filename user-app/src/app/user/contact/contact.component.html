@@ -64,8 +64,15 @@
           <option>Select</option>
           <option *ngFor="let contact of contacts" [value]="contact">{{contact.phone}}</option>
         </select>
+      </li><br><br>
+      <li>
+        <button type="submit" class="btn btn-success" (click)="getSoftwares()">GetAllowedSoftwaresToPub</button>
+          <select class="selectpicker headerSelect">
+              <option>softwares</option>
+              <option *ngFor="let software of softwares" [value]="softwares">{{software.name}}</option>
+          </select>
       </li>
-    </ul><br><br>
+    </ul><br><br><br><br>
     <div class="form-group">
       <button type="submit" class="btn btn-success" (click)="getOtp()">GET OTP</button>
       <div class="form-group">

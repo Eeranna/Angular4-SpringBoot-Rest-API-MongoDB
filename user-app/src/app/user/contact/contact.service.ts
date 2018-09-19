@@ -12,6 +12,7 @@ export class ContactService {
 
   private apiUrl = 'http://localhost:8080/contacts';
   private otpUrl = 'http://localhost:8080/otp';
+  private softwareUrl = 'http://localhost:8080/softwares';
   contacts: any;
   constructor(private http: Http, private router: Router, private httpClient: HttpClient) { }
 
@@ -46,6 +47,10 @@ export class ContactService {
 
   getOtp() {
     return this.httpClient.get<any>(this.otpUrl);
+  }
+
+  getSoftwares() {
+    return this.httpClient.get<any>(this.softwareUrl);
   }
 
 

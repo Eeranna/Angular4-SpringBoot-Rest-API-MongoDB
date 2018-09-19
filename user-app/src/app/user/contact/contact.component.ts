@@ -11,7 +11,16 @@ export class ContactComponent implements OnInit {
 
   contacts: any;
   otps = [];
+  softwares: any;
   message = '';
+  id: number;
+  name: string;
+  address: string;
+  city: string;
+  phone: number;
+  email: string;
+  otp: string;
+
   constructor(private contactService: ContactService) { }
   ngOnInit() {
     this.getContacts();
@@ -29,6 +38,13 @@ export class ContactComponent implements OnInit {
     this.contactService.getOtp()
       .subscribe(
         data => this.otps = data,
+        error => this.message = error,
+      );
+  }
+  getSoftwares(){
+    this.contactService.getSoftwares()
+      .subscribe(
+        data => this.softwares = data,
         error => this.message = error,
       );
   }
