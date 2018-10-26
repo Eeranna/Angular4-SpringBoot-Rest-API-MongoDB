@@ -1,5 +1,5 @@
 :host {
-  background: #049fd9;
+  background: #1976d2;
   color: #fff;
   position: fixed;
   left: auto;
@@ -16,7 +16,7 @@ ul {
   font-size: 18px;
   line-height: 3;
   font-weight: 400;
-  margin-bottom: 430px;
+  margin-bottom: 385px;
   list-style: none;
 }
 

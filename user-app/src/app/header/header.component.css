@@ -117,11 +117,11 @@ table.dataTable tr th.select-checkbox.selected::after {
 .navbar-inverse .navbar-nav>.open>a,
 .navbar-inverse .navbar-nav>.open>a:focus,
 .navbar-inverse .navbar-nav>.open>a:hover {
-  background-color: #049fd9;
+  background-color: #1976d2;
 }
 
 .navbar-inverse {
-  background-color: #049fd9;
+  background-color: #1976d2;
   border-color: #fff;
   color: #fff
 }
