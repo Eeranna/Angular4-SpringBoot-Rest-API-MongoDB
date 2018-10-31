@@ -7,7 +7,7 @@
   left: 0;
   bottom: 0;
   width: 10%;
-  min-width: 205px;
+  min-width: 195px;
   /*z-index: 9999;*/
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
@@ -16,7 +16,7 @@ ul {
   font-size: 18px;
   line-height: 3;
   font-weight: 400;
-  margin-bottom: 455px;
+  margin-bottom: 420px;
   list-style: none;
 }
 
