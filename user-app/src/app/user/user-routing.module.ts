@@ -24,6 +24,7 @@ import {TrackMasterComponent} from "./track-master/track-master.component";
 import {BtsProcessComponent} from "./bts-process/bts-process.component";
 import {EmployeeListComponent} from './menulinks/employee-list/employee-list.component';
 import {HotelInfoComponent} from './menulinks/hotel-info/hotel-info.component';
+import {ZomatoComponent} from './menulinks/zomato/zomato.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/signin', pathMatch: 'full' },
@@ -47,6 +48,7 @@ const routes: Routes = [
   { path: 'governance', component: GovernanceComponent },
   { path: 'employee', component: EmployeeListComponent },
   { path: 'hotel', component: HotelInfoComponent },
+  { path: 'zomato', component: ZomatoComponent },
   { path: 'contacts', component: ContactComponent },
   { path: 'contact-detail/:id',  component: ContactDetailComponent, data: { title: 'Contact Details' }},
   { path: 'contact-create', component: ContactCreateComponent, data: { title: 'Create Contact' }},

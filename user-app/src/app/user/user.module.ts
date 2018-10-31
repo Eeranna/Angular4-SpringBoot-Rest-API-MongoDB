@@ -25,6 +25,7 @@ import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {Ng2OrderModule} from 'ng2-order-pipe';
 import {HotelInfoComponent} from './menulinks/hotel-info/hotel-info.component';
+import {ZomatoComponent} from './menulinks/zomato/zomato.component';
 
 @NgModule({
   imports: [
@@ -56,7 +57,8 @@ import {HotelInfoComponent} from './menulinks/hotel-info/hotel-info.component';
     TrackMasterComponent,
     BtsProcessComponent,
     EmployeeListComponent,
-    HotelInfoComponent
+    HotelInfoComponent,
+    ZomatoComponent
   ]
 })
 export class UserModule { }

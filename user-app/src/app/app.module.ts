@@ -34,6 +34,7 @@ import {TrackMasterService} from "./user/track-master/track-master.service";
 import {BtsProcessService} from "./user/bts-process/bts-process.service";
 import {EmpService} from './user/menulinks/employee-list/emp.service';
 import {HotelService} from './user/menulinks/hotel-info/hotel.service';
+import {ZomatoService} from './user/menulinks/zomato/zomato.service';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import {HotelService} from './user/menulinks/hotel-info/hotel.service';
     TrackMasterService,
     BtsProcessService,
     EmpService,
-    HotelService
+    HotelService,
+    ZomatoService
   ],
   bootstrap: [AppComponent]
 })
