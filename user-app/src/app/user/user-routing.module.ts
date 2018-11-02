@@ -25,6 +25,7 @@ import {BtsProcessComponent} from "./bts-process/bts-process.component";
 import {EmployeeListComponent} from './menulinks/employee-list/employee-list.component';
 import {HotelInfoComponent} from './menulinks/hotel-info/hotel-info.component';
 import {ZomatoComponent} from './menulinks/zomato/zomato.component';
+import {AngularGridComponent} from './menulinks/angular-grid/angular-grid.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/signin', pathMatch: 'full' },
@@ -44,7 +45,8 @@ const routes: Routes = [
   { path: 'createtopic', component: TopicCreateComponent },
   { path: 'topic/edit/:eid', component: TopicCreateComponent },
 
-  { path: 'about', component: AboutComponent },
+  /*{ path: 'about', component: AboutComponent },*/
+  { path: 'aggrid', component: AngularGridComponent },
   { path: 'governance', component: GovernanceComponent },
   { path: 'employee', component: EmployeeListComponent },
   { path: 'hotel', component: HotelInfoComponent },

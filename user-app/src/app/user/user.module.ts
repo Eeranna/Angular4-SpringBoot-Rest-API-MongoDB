@@ -26,6 +26,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {Ng2OrderModule} from 'ng2-order-pipe';
 import {HotelInfoComponent} from './menulinks/hotel-info/hotel-info.component';
 import {ZomatoComponent} from './menulinks/zomato/zomato.component';
+import {AngularGridComponent} from './menulinks/angular-grid/angular-grid.component';
+import {AgGridModule} from 'ag-grid-angular';
 
 @NgModule({
   imports: [
@@ -36,7 +38,8 @@ import {ZomatoComponent} from './menulinks/zomato/zomato.component';
     BrowserAnimationsModule,
     Ng2SearchPipeModule,
     NgxPaginationModule,
-    Ng2OrderModule
+    Ng2OrderModule,
+    AgGridModule.withComponents(null)
   ],
   declarations: [
     UserListComponent,
@@ -58,7 +61,8 @@ import {ZomatoComponent} from './menulinks/zomato/zomato.component';
     BtsProcessComponent,
     EmployeeListComponent,
     HotelInfoComponent,
-    ZomatoComponent
+    ZomatoComponent,
+    AngularGridComponent
   ]
 })
 export class UserModule { }
