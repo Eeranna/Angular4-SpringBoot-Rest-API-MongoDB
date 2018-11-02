@@ -45,7 +45,7 @@ const routes: Routes = [
   { path: 'createtopic', component: TopicCreateComponent },
   { path: 'topic/edit/:eid', component: TopicCreateComponent },
 
-  /*{ path: 'about', component: AboutComponent },*/
+  { path: 'about', component: AboutComponent },
   { path: 'aggrid', component: AngularGridComponent },
   { path: 'governance', component: GovernanceComponent },
   { path: 'employee', component: EmployeeListComponent },
